@@ -87,7 +87,7 @@ export default function IndividualSignup() {
       }
 
       // Extract candidateId from response
-      const candidateId = result.data?.candidateId
+      const candidateId = (result.data as any)?.candidateId
       if (candidateId) {
         setSignupData({
           ...signupData,

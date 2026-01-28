@@ -73,7 +73,7 @@ export default function SkillsForm({
   const handleRemoveSkill = (skill: string) => {
     setFormData((prev) => ({
       ...prev,
-      skills: prev.skills.filter((s) => s !== skill),
+      skills: prev.skills.filter((s: string) => s !== skill),
     }))
   }
 
@@ -89,7 +89,7 @@ export default function SkillsForm({
   const handleRemoveLanguage = (language: string) => {
     setFormData((prev) => ({
       ...prev,
-      languagesKnown: prev.languagesKnown.filter((l) => l !== language),
+      languagesKnown: prev.languagesKnown.filter((l: string) => l !== language),
     }))
   }
 
@@ -107,7 +107,7 @@ export default function SkillsForm({
   const handleRemoveCertification = (cert: string) => {
     setFormData((prev) => ({
       ...prev,
-      certifications: prev.certifications.filter((c) => c !== cert),
+      certifications: prev.certifications.filter((c: string) => c !== cert),
     }))
   }
 
@@ -169,7 +169,7 @@ export default function SkillsForm({
             Selected Skills:
           </Typography>
           <Stack direction="row" spacing={1} sx={{ mb: 3, flexWrap: 'wrap' }}>
-            {formData.skills.map((skill) => (
+            {formData.skills.map((skill: string) => (
               <Chip
                 key={skill}
                 label={skill}
@@ -212,7 +212,7 @@ export default function SkillsForm({
             Selected Languages:
           </Typography>
           <Stack direction="row" spacing={1} sx={{ mb: 3, flexWrap: 'wrap' }}>
-            {formData.languagesKnown.map((language) => (
+            {formData.languagesKnown.map((language: string) => (
               <Chip
                 key={language}
                 label={language}
@@ -257,7 +257,7 @@ export default function SkillsForm({
             Added Certifications:
           </Typography>
           <Stack direction="row" spacing={1} sx={{ mb: 3, flexWrap: 'wrap' }}>
-            {formData.certifications.map((cert) => (
+            {formData.certifications.map((cert: string) => (
               <Chip
                 key={cert}
                 label={cert}
