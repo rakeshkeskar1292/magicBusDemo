@@ -1,0 +1,15 @@
+﻿{
+  "SQLServerDBConnectionString": "",
+  "controlPanelLink": "https://portal.azure.com",
+  "databases": null,
+  "destinationAppUrl": "https://magicbuswebappnew-duenfjfugfg2b4e6.southeastasia-01.azurewebsites.net",
+  "hostingProviderForumLink": "",
+  "msdeploySite": "magicBusWebAppNew",
+  "mySQLDBConnectionString": "",
+  "profileName": "magicBusWebAppNew - Web Deploy",
+  "publishMethod": "MSDeploy",
+  "publishUrl": "magicbuswebappnew-duenfjfugfg2b4e6.scm.southeastasia-01.azurewebsites.net:443",
+  "userName": "$magicBusWebAppNew",
+  "userPWD": "ZwawfyN2QiLaM1AHYHfWN0yCv463lfAG2SnNGXoiuSim2QdufRlQf8Ghkkhl",
+  "webSystem": "WebSites"
+}

@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2026-01-28T22:16:28.084" instance="58ab58" url="/api/deployments/latest" method="GET" type="request" pid="830,1,37" Accept="*/*" Host="magicbuswebappnew-duenfjfugfg2b4e6.scm.southeastasia-01.azurewebsites.net" User-Agent="AZURECLI/2.81.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bas..." x-ms-client-request-id="f6211613-fc96-11f0-9f8e-6045bdaab496" X-ARR-LOG-ID="f6211613-fc96-11f0-9f8e-6045bdaab496" CLIENT-IP="74.225.176.69:3570" X-SITE-DEPLOYMENT-ID="magicBusWebAppNew" WAS-DEFAULT-HOSTNAME="magicbuswebappnew-duenfjfugfg2b4e6.scm.southeastasia-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest" X-Client-IP="74.225.176.69" X-Client-Port="3570" >
+  <step title="Cleanup Xml Logs" date="2026-01-28T22:16:28.088" /><!-- duration: 19ms -->
+  <step title="DeploymentService.GetResult" date="2026-01-28T22:16:28.128" >
+    <step title="DeploymentService.GetLatestDeployment" date="2026-01-28T22:16:28.136" >
+      <step title="DeploymentManager.GetResults" date="2026-01-28T22:16:28.148" /><!-- duration: 575ms -->
+    </step><!-- duration: 590ms -->
+  </step><!-- duration: 602ms -->
+  <step title="Outgoing response" date="2026-01-28T22:16:28.733" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 4ms -->
+</step><!-- duration: 655ms -->

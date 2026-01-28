@@ -1,0 +1,30 @@
+2026-01-28T20:07:54  Fetching changes.
+2026-01-28T20:07:54    Starting  LocalZipHandler
+2026-01-28T20:07:54    Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/60c35009-732d-4de0-936b-ce6b42004f64.zip (0.00 MB) to /tmp/zipdeploy/extracted
+2026-01-28T20:07:57  Updating submodules.
+2026-01-28T20:07:58  Preparing deployment for commit id '61a01d6e-0'.
+2026-01-28T20:07:58  PreDeployment: context.CleanOutputPath False
+2026-01-28T20:07:58  PreDeployment: context.OutputPath /home/site/wwwroot
+2026-01-28T20:07:58  Running custom deployment command...
+2026-01-28T20:07:58  Not setting execute permissions for npm run build:prod
+2026-01-28T20:07:58  Running deployment command...
+2026-01-28T20:07:58    Command: npm run build:prod
+2026-01-28T20:07:59    npm error code ENOENT
+2026-01-28T20:07:59    npm error syscall open
+2026-01-28T20:07:59    npm error path /package.json
+2026-01-28T20:07:59    npm error errno -2
+2026-01-28T20:07:59    npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/package.json'
+2026-01-28T20:07:59    npm error enoent This is related to npm not being able to find a file.
+2026-01-28T20:07:59    npm error enoent
+2026-01-28T20:07:59    npm error A complete log of this run can be found in: /home/.npm/_logs/2026-01-28T20_07_59_017Z-debug-0.log
+2026-01-28T20:07:59    npm error code ENOENT
+npm error syscall open
+npm error path /package.json
+npm error errno -2
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open '/package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+npm error A complete log of this run can be found in: /home/.npm/_logs/2026-01-28T20_07_59_017Z-debug-0.log
+/opt/Kudu/Scripts/starter.sh npm run build:prod
+2026-01-28T20:07:59  
+2026-01-28T20:07:59  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy

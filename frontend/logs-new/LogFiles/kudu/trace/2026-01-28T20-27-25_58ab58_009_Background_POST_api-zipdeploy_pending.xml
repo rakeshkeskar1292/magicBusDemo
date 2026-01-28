@@ -1,0 +1,765 @@
+<step title="BackgroundTrace" date="2026-01-28T20:27:25.495" instance="58ab58" url="/api/zipdeploy" method="POST" >
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2026-01-28T20:27:25.529" /><!-- duration: 2ms -->
+  <step title="Creating temporary deployment" date="2026-01-28T20:27:25.535" /><!-- duration: 57ms -->
+  <step title="Performing fetch based deployment" date="2026-01-28T20:27:25.618" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/4afa2844-2cee-4a25-b947-46223be0d592.zip (1.75 MB) to /tmp/zipdeploy/extracted" date="2026-01-28T20:27:26.750" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 9" date="2026-01-28T20:27:26.791" /><!-- duration: 3ms -->
+    </step><!-- duration: 47ms -->
+    <step title="Deployment timer started" date="2026-01-28T20:27:28.807" >
+      <step title="DeploymentManager.Deploy(id:3b59e5a2-09f8-4877-8d75-3597216589a3)" date="2026-01-28T20:27:28.812" >
+        <step title="Collecting changeset information" date="2026-01-28T20:27:28.824" /><!-- duration: 81ms -->
+        <step title="Updating submodules" date="2026-01-28T20:27:28.909" /><!-- duration: 1125ms -->
+        <step title="Determining deployment builder" date="2026-01-28T20:27:30.241" >
+          <step title="Builder is BasicBuilder" date="2026-01-28T20:27:30.249" /><!-- duration: 3ms -->
+        </step><!-- duration: 14ms -->
+        <step title="PreDeployment: context.CleanOutputPath False" date="2026-01-28T20:27:30.299" >
+          <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2026-01-28T20:27:30.408" >
+            <step title="Building" date="2026-01-28T20:27:30.522" >
+              <step title="Executing external process" date="2026-01-28T20:27:30.791" type="process" path="starter.sh" arguments="/opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  " >
+                <step title="Process dump" date="2026-01-28T20:27:33.189" exitCode="123" type="processOutput" /><!-- duration: 4ms -->
+              </step><!-- duration: 2406ms -->
+              <step title="Error occurred" date="2026-01-28T20:27:33.207" type="error" text="rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  " stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122" /><!-- duration: 4ms -->
+              <step title="Warning" date="2026-01-28T20:27:33.214" type="warning" text="Exception in parallel rsync: ExitCode: 123, Output: Run rsync from: /tmp/zipdeploy/extracted/ to: /home/site/wwwroot/ in 8 parallel threads
+Delete options: clean=False, use manifest=True, directory to ignore=
+Prev manifest = /home/site/deployments/a8d02016-1b2a-45d5-839c-42678baa73ac/manifest and next /home/site/deployments/3b59e5a2-09f8-4877-8d75-3597216589a3/manifest
+Cleaning up /tmp//filelist.txt and /tmp//splits
+Creating a list of all files at /tmp//filelist.txt
+No directory to exclude.
+Created /tmp//filelist.txt. Total number of files to be synced = 27.
+Created batches from the list of files. Processing 4 files in each thread
+Running rsync for filelist /tmp//splits/split.aa from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+Running rsync for filelist /tmp//splits/split.ab from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+Running rsync for filelist /tmp//splits/split.ac from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+Running rsync for filelist /tmp//splits/split.ad from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+Running rsync for filelist /tmp//splits/split.ae from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+Running rsync for filelist /tmp//splits/split.af from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+Running rsync for filelist /tmp//splits/split.ag from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 202.83K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 182
+Total bytes received: 12
+
+sent 182 bytes  received 12 bytes  388.00 bytes/sec
+total size is 202.83K  speedup is 1,045.52
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 399.94K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 166
+Total bytes received: 12
+
+sent 166 bytes  received 12 bytes  356.00 bytes/sec
+total size is 399.94K  speedup is 2,246.88
+Attempt 1: Rsync for filelist /tmp//splits/split.ab completed with exit code 23
+Attempt 1: Rsync for filelist /tmp//splits/split.af completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 387.19K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 174
+Total bytes received: 12
+
+sent 174 bytes  received 12 bytes  372.00 bytes/sec
+total size is 387.19K  speedup is 2,081.66
+Attempt 1: Rsync for filelist /tmp//splits/split.ae completed with exit code 23
+
+Number of files: 3 (reg: 3)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 563.75K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 168
+Total bytes received: 12
+
+sent 168 bytes  received 12 bytes  360.00 bytes/sec
+total size is 563.75K  speedup is 3,131.94
+Attempt 1: Rsync for filelist /tmp//splits/split.ag completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 1 (reg: 1)
+Number of deleted files: 0
+Number of regular files transferred: 1
+Total file size: 259.08K bytes
+Total transferred file size: 1.18K bytes
+Literal data: 1.18K bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 761
+Total bytes received: 31
+
+sent 761 bytes  received 31 bytes  528.00 bytes/sec
+total size is 259.08K  speedup is 327.12
+Attempt 1: Rsync for filelist /tmp//splits/split.aa completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 1 (reg: 1)
+Number of deleted files: 0
+Number of regular files transferred: 1
+Total file size: 143.23K bytes
+Total transferred file size: 21 bytes
+Literal data: 21 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 245
+Total bytes received: 35
+
+sent 245 bytes  received 35 bytes  186.67 bytes/sec
+total size is 143.23K  speedup is 511.54
+Attempt 1: Rsync for filelist /tmp//splits/split.ac completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 399.94K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 166
+Total bytes received: 12
+
+sent 166 bytes  received 12 bytes  356.00 bytes/sec
+total size is 399.94K  speedup is 2,246.88
+Attempt 2: Rsync for filelist /tmp//splits/split.af completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 202.83K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 182
+Total bytes received: 12
+
+sent 182 bytes  received 12 bytes  388.00 bytes/sec
+total size is 202.83K  speedup is 1,045.52
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 387.19K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 174
+Total bytes received: 12
+
+sent 174 bytes  received 12 bytes  372.00 bytes/sec
+total size is 387.19K  speedup is 2,081.66
+Attempt 2: Rsync for filelist /tmp//splits/split.ab completed with exit code 23
+Attempt 2: Rsync for filelist /tmp//splits/split.ae completed with exit code 23
+
+Number of files: 3 (reg: 3)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 563.75K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 168
+Total bytes received: 12
+
+sent 168 bytes  received 12 bytes  360.00 bytes/sec
+total size is 563.75K  speedup is 3,131.94
+Attempt 2: Rsync for filelist /tmp//splits/split.ag completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 2 (reg: 2)
+Number of deleted files: 0
+Number of regular files transferred: 2
+Total file size: 393.80K bytes
+Total transferred file size: 187.34K bytes
+Literal data: 187.34K bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 43.56K
+Total bytes received: 50
+
+sent 43.56K bytes  received 50 bytes  29.07K bytes/sec
+total size is 393.80K  speedup is 9.03
+Attempt 1: Rsync for filelist /tmp//splits/split.ad completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 259.08K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 180
+Total bytes received: 15
+
+sent 180 bytes  received 15 bytes  390.00 bytes/sec
+total size is 259.08K  speedup is 1,328.63
+Attempt 2: Rsync for filelist /tmp//splits/split.aa completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 143.23K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 180
+Total bytes received: 19
+
+sent 180 bytes  received 19 bytes  398.00 bytes/sec
+total size is 143.23K  speedup is 719.75
+Attempt 2: Rsync for filelist /tmp//splits/split.ac completed with exit code 23
+
+Number of files: 4 (reg: 4)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 393.80K bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 185
+Total bytes received: 18
+
+sent 185 bytes  received 18 bytes  406.00 bytes/sec
+total size is 393.80K  speedup is 1,939.88
+Attempt 2: Rsync for filelist /tmp//splits/split.ad completed with exit code 23
+An error has occurred during web site deployment.
+Rsync failed in 1 seconds, Error: rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7], Kudu.Core.Infrastructure.CommandLineException: rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  
+   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.GeneratorSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/GeneratorSiteBuilder.cs:line 70" /><!-- duration: 4ms -->
+              <step title="Error occurred" date="2026-01-28T20:27:33.231" type="error" text="rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  " stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.GeneratorSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/GeneratorSiteBuilder.cs:line 70
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771" /><!-- duration: 4ms -->
+              <step title="Purge deployment items" date="2026-01-28T20:27:33.530" >
+                <step title="Remove a0e5fc3a-, Failed, received at 01/28/2026 20:26:27" date="2026-01-28T20:27:33.580" /><!-- duration: 3ms -->
+              </step><!-- duration: 56ms -->
+            </step><!-- duration: 3067ms -->
+          </step><!-- duration: 3185ms -->
+          <step title="Error occurred" date="2026-01-28T20:27:33.597" type="error" text="rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  " stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.GeneratorSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/GeneratorSiteBuilder.cs:line 70
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840" /><!-- duration: 4ms -->
+          <step title="Cleaning up temp files" date="2026-01-28T20:27:33.645" /><!-- duration: 3ms -->
+          <step title="Cleaning up temp files" date="2026-01-28T20:27:33.651" /><!-- duration: 503ms -->
+          <step title="Error occurred" date="2026-01-28T20:27:34.173" type="error" text="rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  " stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.GeneratorSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/GeneratorSiteBuilder.cs:line 70
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 3ms -->
+        </step><!-- duration: 3881ms -->
+        <step title="Reloading status file with latest updates" date="2026-01-28T20:27:34.223" >
+          <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2026-01-28T20:27:34.227" /><!-- duration: 18ms -->
+        </step><!-- duration: 24ms -->
+        <step title="Error occurred" date="2026-01-28T20:27:34.251" type="error" text="rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-6.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-7.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DuQGPZlr.css&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\index.html&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-10.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-8.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-3.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-1.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-5.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-9.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-2.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\index-DNOEps8r.js&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo.svg&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-1.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-2.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\logo-dropbox.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\magic-bus-logo.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-4.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\product-5.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-11.png&quot;: Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat &quot;/home/site/wwwroot/dist\assets\avatar-4.png&quot;: Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ False True  " stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.GeneratorSiteBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/GeneratorSiteBuilder.cs:line 70
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 4ms -->
+        <step title="Marking deployment as failed and cleaning up the temp deployment" date="2026-01-28T20:27:34.288" /><!-- duration: 4ms -->
+      </step><!-- duration: 5588ms -->
+      <step title="Error occurred" date="2026-01-28T20:27:34.413" type="error" text="One or more errors occurred. (Deployment failed)" stackTrace="   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass22_1.&lt;PerformBackgroundDeployment&gt;b__3() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 414
+   at Kudu.Contracts.Infrastructure.LockExtensions.TryLockOperation(IOperationLock lockObj, Action operation, String operationName, TimeSpan timeout) in /tmp/KuduLite/Kudu.Contracts/Infrastructure/LockExtensions.cs:line 34
+   at Kudu.Contracts.Infrastructure.LockExtensions.LockOperation(IOperationLock lockObj, Action operation, String operationName, TimeSpan timeout) in /tmp/KuduLite/Kudu.Contracts/Infrastructure/LockExtensions.cs:line 46
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass22_0.&lt;PerformBackgroundDeployment&gt;b__1() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 393" innerText="Deployment failed" innerStackTrace="   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+   at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230" /><!-- duration: 3ms -->
+    </step><!-- duration: 5612ms -->
